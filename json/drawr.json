@@ -1,0 +1,52 @@
+[
+  {
+    "name": "全般",
+    "namespace": "general",
+    "content": [
+      {
+        "name": "manifestの書き方",
+        "content": "how_to_write_manifest"
+      }
+    ]
+  },
+  {
+    "name": "ビヘイビア",
+    "namespace": "behavior",
+    "content": [
+      {
+        "name": "コンポーネント",
+        "namespace": "component",
+        "content": [
+          {
+            "name": "minecraft:attack",
+            "content": "minecraft_attack"
+          }
+        ]
+      },
+      {
+        "name": "イベント",
+        "namespace": "event",
+        "content": [
+        ]
+      },
+      {
+        "name": "エンティティ",
+        "namespace": "entity",
+        "content": [
+        ]
+      },
+      {
+        "name": "ルートテーブル",
+        "namespace": "loot_table",
+        "content": [
+        ]
+      }
+    ]
+  },
+  {
+    "name": "リソースパック",
+    "namespace": "resource_pack",
+    "content": [
+    ]
+  }
+]
