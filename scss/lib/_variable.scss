@@ -1,0 +1,50 @@
+$color--accent: #4CAF50;
+$color--accent600: #43A047;
+$color--primary: #212121;
+$color--primary600: #212121;
+
+$color--background: #303030;
+$color--boxshadow: rgba(0, 0, 0, 0.26);
+
+$color--white: #FFFFFF;
+$color--black: #000000;
+$color--red: #F44336;
+$color--pink: #E91E63;
+$color--purple: #9C27B0;
+$color--deepPurple: #673AB7;
+$color--indigo: #3F51B5;
+$color--blue: #2196F3;
+$color--lightBlue: #03A9F4;
+$color--cyan: #00BCD4;
+$color--teal: #009688;
+$color--green: #4CAF50;
+$color--lightGreen: #8BC34A;
+$color--lime: #CDDC39;
+$color--yellow: #FFEB3B;
+$color--amber: #FFC107;
+$color--orange: #FF9800;
+$color--deepOrange: #FF5722;
+$color--brown: #795548;
+$color--grey: #9E9E9E;
+$color--grey300: #E0E0E0;
+$color--grey400: #BDBDBD;
+$color--grey800: #424242;
+$color--blueGrey: #607D8B;
+
+$color--button--background: #E0E0E0;
+$color--button--background--active: #BDBDBD;
+$color--button--text: #000000;
+
+$color--button--background--accent: $color--accent;
+$color--button--background--accent--active: $color--accent600;
+$color--button--text--accent: #FFFFFF;
+
+$color--button--background--primary: $color--primary;
+$color--button--background--primary--active: $color--primary600;
+$color--button--text--primary: #FFFFFF;
+
+$layout__media--desktop--max: 768px;
+$layout__media--mobile--min: $layout__media--desktop--max - 1px;
+
+$layout__toolbar--desktop--height: 64px;
+$layout__toolbar--mobile--height: 54px;

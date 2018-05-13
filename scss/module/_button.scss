@@ -1,0 +1,86 @@
+@import "../lib/variable";
+
+.materialy-button {
+  font-size: 1rem;
+  line-height: 2.25rem;
+  display: inline-block;
+  min-width: 3.5rem;
+  width: auto;
+  min-height: 2.25rem;
+  height: auto;
+  margin: 0.25rem;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: $color--button--text;
+  border-radius: 2px;
+  background-color: $color--button--background;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.40);
+  }
+  &:active {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.56);
+    background-color: $color--button--background--active;
+  }
+  &--accent {
+    color: $color--button--text--accent;
+    background-color: $color--accent;
+
+    @extend .materialy-button;
+
+    &:active {
+      background-color: $color--button--background--accent--active;
+    }
+  }
+  &--primary {
+    color: $color--button--text--primary;
+    background-color: $color--primary;
+
+    @extend .materialy-button;
+
+    &:active {
+      background-color: $color--button--background--primary--active;
+    }
+  }
+
+  &--flat {
+    background-color: rgba($color--button--background,0);
+    box-shadow: none;
+
+    @extend .materialy-button;
+    &:hover {
+      background-color: rgba($color--button--background,0.3);
+      box-shadow: none;
+    }
+    &:active {
+      background-color: rgba($color--button--background,0.8);
+      box-shadow: none;
+    }
+
+    &--accent {
+      color: $color--accent;
+      background-color: rgba($color--accent,0);
+
+      @extend .materialy-button--flat;
+      &:hover {
+        background-color: rgba($color--accent,0.1);
+      }
+      &:active {
+        background-color: rgba($color--accent,0.3);
+      }
+    }
+    &--primary {
+      color: $color--primary;
+      background-color: rgba($color--primary,0);
+
+      @extend .materialy-button--flat;
+      &:hover {
+        background-color: rgba($color--primary,0.1);
+      }
+      &:active {
+        background-color: rgba($color--primary,0.3);
+      }
+    }
+  }
+}

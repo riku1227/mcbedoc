@@ -1,0 +1,43 @@
+@import "lib/variable";
+
+body {
+  font-family: "Roboto", "Noto Sans Japanese", sans-serif;
+  margin: 0;
+  background-color: $color__background;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0;
+}
+
+.materialy-center--inline {
+  display: flex;
+  align-items: center;
+}
+
+.materialy-center--block {
+  text-align: center;
+}
+
+.materialy-match_parent {
+  width: 90% !important;
+}
+
+.materialy-mainContent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: $layout__media--desktop--max) {
+  .materialy-mainContent {
+    padding-top: $layout__toolbar--desktop--height;
+  }
+}
+@media screen and (max-width: $layout__media--mobile--min) {
+  .materialy-mainContent {
+    padding-top: $layout__toolbar--mobile--height;
+  }
+}

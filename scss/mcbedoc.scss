@@ -1,0 +1,63 @@
+.materialy-toolbar__content__container > label {
+  font-size: 1rem;
+  line-height: 3rem;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 3rem;
+  padding-left: 2rem;
+  text-align: left;
+  vertical-align: top;
+  text-decoration: none;
+  color: #4CAF50;
+  background: #292929;
+}
+
+.materialy-toolbar__content__container > input {
+  display: none;
+}
+
+.materialy-toolbar__content__container > div {
+  padding-left: 1rem;
+  width: 100%;
+  display: none;
+}
+
+.materialy-toolbar__content__container > div > a {
+  font-size: 1rem;
+  line-height: 3.5rem;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 3.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  vertical-align: top;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #292929;
+}
+
+.materialy-toolbar__content__container > label:hover {
+  background: #212121;
+}
+
+.materialy-toolbar__content__container > label:before {
+  content: "▶";
+}
+
+.materialy-toolbar__content__container > div > a:hover {
+  background: #212121;
+}
+
+.materialy-toolbar__content__container >input:checked ~ div{
+  display: inline-block;
+}
+
+.materialy-toolbar__content__container >input:checked ~ label:before{
+  content: "▼";
+}
+
+.materialy-button--accent {
+  user-select: none;
+}
