@@ -45,7 +45,7 @@ const generateDrawr = function(json) {
   loadFile("https://riku1227.github.io/mcbedoc/core/header.html", generateHeader);
   let target = document.getElementsByClassName("materialy-toolbar")[0];
   const observerHeader = function() {
-    loadFile("https://riku1227.github.io/json/mcbedoc/drawr.json", generateDrawr);
+    loadFile("https://riku1227.github.io/mcbedoc/json/drawr.json", generateDrawr);
   };
   let mo = new MutationObserver(observerHeader);
   mo.observe(target, {childList: true});
