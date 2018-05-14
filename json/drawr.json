@@ -1,52 +1,66 @@
 [
   {
-    "name": "全般",
-    "namespace": "general",
-    "content": [
-      {
-        "name": "manifestの書き方",
-        "content": "how_to_write_manifest"
-      }
-    ]
-  },
-  {
     "name": "ビヘイビア",
     "namespace": "behavior",
     "content": [
       {
-        "name": "コンポーネント",
-        "namespace": "component",
-        "content": [
-          {
-            "name": "minecraft:attack",
-            "content": "minecraft_attack"
-          }
-        ]
-      },
-      {
-        "name": "イベント",
-        "namespace": "event",
-        "content": [
-        ]
-      },
-      {
         "name": "エンティティ",
         "namespace": "entity",
         "content": [
-        ]
-      },
-      {
-        "name": "ルートテーブル",
-        "namespace": "loot_table",
-        "content": [
+          {
+            "name": "エンティティ定義",
+            "namespace": "entity_definition",
+            "content": [
+            ]
+          },
+          {
+            "name": "属性",
+            "namespace": "attributes",
+            "content": [
+              {
+                "name": "minecraft:attack",
+                "content": "minecraft_attack"
+              }
+            ]
+          },
+          {
+            "name": "プロパティ",
+            "namespace": "properties",
+            "content": [
+            ]
+          },
+          {
+            "name": "コンポーネント",
+            "namespace": "components",
+            "content": [
+            ]
+          },
+          {
+            "name": "AIの目標",
+            "namespace": "ai_goals",
+            "content": [
+            ]
+          },
+          {
+            "name": "フィルター",
+            "namespace": "filters",
+            "content": [
+            ]
+          },
+          {
+            "name": "トリガー",
+            "namespace": "triggers",
+            "content": [
+            ]
+          },
+          {
+            "name": "組み込みのイベント",
+            "namespace": "built_in_events",
+            "content": [
+            ]
+          }
         ]
       }
-    ]
-  },
-  {
-    "name": "リソースパック",
-    "namespace": "resource_pack",
-    "content": [
     ]
   }
 ]
