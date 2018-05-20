@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#212121">
+  <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/style.css">
+  <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/vs2015.css">
+  <script src="https://riku1227.github.io/mcbedoc/js/highlight.pack.js"></script>
+  <title>minecraft:attack - MCBE Doc | riku1227 Website</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@_riku1227_" />
+  <meta property="og:site_name" content="MCBE Doc | riku1227 Website" />
+  <meta property="og:title" content="minecraft:attack - MCBE Doc | riku1227 Website" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://riku1227.github.io/mcbedoc/reference/behavior/entity/attributes/minecraft_attack.html" />
+  <meta property="og:image" content="https://riku1227.github.io/mcbedoc/image/cover_image.png" />
+  <meta property="og:description" content="エンティティの近接攻撃力と攻撃時の追加効果を設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです" />
+  <meta name="description" content="エンティティの近接攻撃力と攻撃時の追加効果を設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです"/>
+</head>
+<body ontouchstart="">
+  <header class="materialy-toolbar">
+  </header>
+  <div class="materialy-mainContent">
+    <div class="materialy-card">
+      <p class="materialy-card__text">このページの最終更新日は 2018/05/20 です</p>
+      <p class="materialy-card__text">このページはMinecraftBE: v1.4.1.0 で動作確認しています</p>
+    </div>
+
+<div class="materialy-card"><p class="materialy-card__title">minecraft:attack</p>
+<p class="materialy-card__text">エンティティの近接攻撃力と攻撃時の追加効果を設定します</p>
+</div>
+<div class="materialy-card">
+<p class="materialy-card__title">パラメーター</p>
+<p class="materialy-card__subtitle">damage</p>
+<pre><code class="json">"damage": [数値, 数値]
+もしくは
+"damage": 数値
+</code></pre>
+<p class="materialy-card__text">デフォルトの値:</p>
+<p class="materialy-card__text">近接攻撃時の与えるダメージの値</p>
+<p class="materialy-card__text">配列にすると 「数字の大きい方以上 数字の小さい方未満」 の値をランダムで与える</p>
+<p class="materialy-card__text">値をマイナスにすると金ハートが最大8個まで増えていきます-100にしても8個までです</p>
+<p class="materialy-card__text">通常のハートは増えません</p>
+<p class="materialy-card__text">小数点以下は切り捨てられます</p>
+<p class="materialy-card__subtitle">effect_duration</p>
+<pre><code class="json">"effect_duration": 数値
+</code></pre>
+<p class="materialy-card__text">デフォルトの値: 0.0</p>
+<p class="materialy-card__text">攻撃したエンティティに与えるステータスフェクトの秒数</p>
+<p class="materialy-card__text">1で1秒</p>
+<p class="materialy-card__text">小数点以下は切り捨てられます</p>
+<p class="materialy-card__subtitle">effect_name</p>
+<pre><code class="json">"effect_name": "文字列"
+</code></pre>
+<p class="materialy-card__text">デフォルトの値: </p>
+<p class="materialy-card__text">近接攻撃されたエンティティに適応されるステータスエフェクトの名前</p>
+<p class="materialy-card__text">名前は/effect コマンド時に使用するエフェクトの名前です(多分)
+</div>
+<div class="materialy-card">
+<p class="materialy-card__title">サンプルコード</p>
+<p class="materialy-card__text">近接攻撃時5ダメージを与える</p>
+<pre><code class="json">"minecraft:attack": {
+  "damage": 5
+}
+</code></pre>
+<p class="materialy-card__text">近接攻撃時5以上20未満ダメージを与える</p>
+<pre><code class="json">"minecraft:attack": {
+  "damage": [5, 20]
+}
+</code></pre>
+<p class="materialy-card__text">近接攻撃時5以上20未満ダメージを与え、「目潰し」を5秒付与する</p>
+<pre><code class="json">"minecraft:attack": {
+  "damage": [5, 20],
+  "effect_duration": 5,
+  "effect_name": "blindness"
+}
+</code></pre>
+</div>
+
+    <div class="materialy-card">
+      <p class="materialy-card__text">バージョンが違っていたりすると動作が違う・使用できない可能性があります。ご注意ください</p>
+    </div>
+  </div>
+  <script async src="https://riku1227.github.io/mcbedoc/js/index.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
