@@ -66,6 +66,6 @@
   {
     "name": "編集履歴",
     "content": "https://riku1227.github.io/mcbedoc/core/edit_history",
-    "isNotReference": false
+    "isNotReference": true
   }
 ]
