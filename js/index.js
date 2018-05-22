@@ -30,7 +30,7 @@ const generateDrawr = function(json) {
       result += `</div>`;
       result += `</div>`;
     } else {
-      if(!object.isNotReference === true) {
+      if(object.isNotReference === true) {
         result += `<a class="materialy-toolbar__content__link" href="${object.content}.html">${object.name}</a>`;
       } else {
         result += `<a href="${namespace + object.content}.html">${object.name}</a>`;
