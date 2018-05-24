@@ -1,5 +1,10 @@
 [
   {
+    "name": "ホーム",
+    "content": "https://riku1227.github.io/mcbedoc/index",
+    "isNotReference": true
+  },
+  {
     "name": "ビヘイビア",
     "namespace": "behavior",
     "content": [
