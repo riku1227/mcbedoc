@@ -25,6 +25,10 @@
               {
                 "name": "minecraft:attack",
                 "content": "minecraft_attack"
+              },
+              {
+                "name": "minecraft:spell_effects",
+                "content": "minecraft_spell_effects"
               }
             ]
           },

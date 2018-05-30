@@ -1,0 +1,137 @@
+MCBEDOCV1
+!headerStart
+title|minecraft:spell_effects
+description|コンポーネントが追加されたときにエンティティに追加または削除するステータスエフェクトを設定します
+check_version|1.4.2.0
+last_update|2018/05/30
+url|behavior/entity/attributes/minecraft_spell_effects.html
+!headerEnd
+$cardStart
+$title(minecraft:spell_effects)
+コンポーネントが追加されたときにエンティティに追加または削除するステータスエフェクトを設定します
+$cardEnd
+$cardStart
+$title(パラメーター)
+$subtitle(add_effects)
+$code
+"add_effects": [] //リスト(配列,中身はオブジェクト)
+$code
+デフォルトの値: 
+コンポーネントが追加された時にエンティティに追加するエフェクトのリスト
+※エフェクトの順番はそのエフェクト達が付与されている状態の時、エフェクト一覧で表示される「下から」順に書かないと正常に動作しない可能性があります。
+$subtitle("add_effects" リストのパラメーター)
+$subtitle(effect)
+$code
+"effect": "文字列"
+$code
+エンティティに付与するエフェクトの名前
+名前は/effect コマンド時に使用するエフェクトの名前です(多分)
+$subtitle(duration)
+$code
+"duration": 数値
+$code
+エンティティに付与するエフェクトの秒数
+1で1秒
+$subtitle(amplifier)
+$code
+"amplifier": 数値
+$code
+エンティティに付与するエフェクトのレベル
+4以上にするとエフェクトのレベルが表示されなくなります
+$subtitle(ambient)
+$code
+"ambient": ?
+$code
+現在不明わかる人がいれば教えていただけるとありがたいです…
+$subtitle(visible)
+$code
+"visible": 真偽値
+$code
+エフェクトが付与された時に出てくるパーティクルの表示設定
+trueで表示, falseで非表示
+$subtitle("add_effects" リストのパラメーター終了)
+$subtitle(remove_effects)
+$code
+"remove_effects": "文字列"
+または
+"remove_effects": [
+  "文字列",
+  "文字列",
+  ....
+]
+$code
+コンポーネントが追加されたときにエンティティから削除するエフェクトの名前(のリスト)
+名前は/effect コマンド時に使用するエフェクトの名前です(多分)
+エフェクトの順番は関係有りません
+配列にすると指定されたエフェクトを全て削除します
+remove_effectsはadd_effectsの「前」に実行されます
+$cardEnd
+$cardStart
+$title(サンプルコード)
+$code
+"minecraft:spell_effects": {
+  "add_effects": [
+    {
+      "effect": "speed",
+      "duration": 120
+    }
+  ]
+}
+$code
+コンポーネントが追加されたときにエンティティに移動速度上昇(レベル4)を2分間付与する
+$code
+"minecraft:spell_effects": {
+  "add_effects": [
+    {
+      "effect": "night_vision",
+      "duration": 240,
+      "visible": false
+    },
+    {
+      "effect": "haste",
+      "duration": 240,
+      "amplifier": 3,
+      "visible": false
+    },
+    {
+      "effect": "speed",
+      "duration": 120,
+      "amplifier": 3,
+      "visible": false
+    }
+  ]
+}
+$code
+コンポーネントが追加されたときにエンティティに暗視(レベル1)と採掘速度上昇(レベル4)を4分間、移動速度上昇(レベル4)を2分間パーティクル非表示で付与する
+$code
+"minecraft:spell_effects": {
+  "remove_effects": "speed"
+}
+$code
+コンポーネントが追加されたときにエンティティから移動速上昇を削除する
+$code
+"minecraft:spell_effects": {
+  "remove_effects": [
+    "speed",
+    "poison",
+    "night_vision"
+  ]
+}
+$code
+コンポーネントが追加されたときにエンティティから「移動速上昇,毒,暗視」を削除する
+$code
+"minecraft:spell_effects": {
+  "add_effects": [
+    {
+      "effect": "haste",
+      "duration": 120
+    }
+  ],
+  "remove_effects": [
+    "speed",
+    "night_vision"
+  ]
+}
+$code
+コンポーネントが追加されたときにエンティティから「移動速度上昇,暗視」を削除し、採掘速度上昇(レベル1)を2分間付与する
+$cardEnd
