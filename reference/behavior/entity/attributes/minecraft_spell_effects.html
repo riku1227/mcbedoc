@@ -38,7 +38,7 @@
 <p class="materialy-card__text">デフォルトの値: </p>
 <p class="materialy-card__text">コンポーネントが追加された時にエンティティに追加するエフェクトのリスト</p>
 <p class="materialy-card__text">※エフェクトの順番はそのエフェクト達が付与されている状態の時、エフェクト一覧で表示される「下から」順に書かないと正常に動作しない可能性があります。</p>
-<p class="materialy-card__subtitle">"add_effects" リストのパラメーター</p>
+<p class="materialy-card__subtitle">"add_effects" リストのパラメーター {</p>
 <p class="materialy-card__subtitle">effect</p>
 <pre><code class="json">"effect": "文字列"
 </code></pre>
@@ -63,7 +63,7 @@
 </code></pre>
 <p class="materialy-card__text">エフェクトが付与された時に出てくるパーティクルの表示設定</p>
 <p class="materialy-card__text">trueで表示, falseで非表示</p>
-<p class="materialy-card__subtitle">"add_effects" リストのパラメーター終了</p>
+<p class="materialy-card__subtitle">} "add_effects" リストのパラメーター終了</p>
 <p class="materialy-card__subtitle">remove_effects</p>
 <pre><code class="json">"remove_effects": "文字列"
 または
@@ -90,7 +90,7 @@
   ]
 }
 </code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに移動速度上昇(レベル4)を2分間付与する</p>
+<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに「移動速度上昇(レベル4)を2分間」付与する</p>
 <pre><code class="json">"minecraft:spell_effects": {
   "add_effects": [
     {
@@ -113,12 +113,12 @@
   ]
 }
 </code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに暗視(レベル1)と採掘速度上昇(レベル4)を4分間、移動速度上昇(レベル4)を2分間パーティクル非表示で付与する</p>
+<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに「暗視(レベル1)と採掘速度上昇(レベル4)を4分間、移動速度上昇(レベル4)を2分間 "パーティクル非表示" 」で付与する</p>
 <pre><code class="json">"minecraft:spell_effects": {
   "remove_effects": "speed"
 }
 </code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから移動速上昇を削除する</p>
+<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから「移動速上昇」を削除する</p>
 <pre><code class="json">"minecraft:spell_effects": {
   "remove_effects": [
     "speed",
@@ -141,7 +141,7 @@
   ]
 }
 </code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから「移動速度上昇,暗視」を削除し、採掘速度上昇(レベル1)を2分間付与する</p>
+<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから「移動速度上昇,暗視」を削除し、「採掘速度上昇(レベル1)を2分間」付与する</p>
 </div>
 
     <div class="materialy-card">
