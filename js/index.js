@@ -33,7 +33,7 @@ const generateDrawr = function(json) {
       if(object.isNotReference === true) {
         result += `<a class="materialy-toolbar__content__link" href="${object.content}.html">${object.name}</a>`;
       } else {
-        result += `<a href="${namespace + object.content}.html">${object.name}</a>`;
+        result += `<a href="https://riku1227.github.io/mcbedoc/${namespace + object.content}.html">${object.name}</a>`;
       }
     }
   };
@@ -45,7 +45,6 @@ const generateDrawr = function(json) {
 };
 
 (function () {
-  //document.getElementById("precode").innerHTML = "TEST {\n  return 0;\n}";
   loadFile("https://riku1227.github.io/mcbedoc/core/header.html", generateHeader);
   let target = document.getElementsByClassName("materialy-toolbar")[0];
   const observerHeader = function() {
