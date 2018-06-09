@@ -185,7 +185,7 @@ h1 {
   min-height: 2.25rem;
   height: auto;
   margin: 0.25rem;
-  padding: 0 1rem;
+  padding: 0.5 0rem;
   text-align: center;
   text-decoration: none;
   color: #000000;
@@ -353,9 +353,9 @@ h1 {
     .materialy-card__container > input:checked ~ label:before {
       content: "▼ "; }
   .materialy-card__container > label {
-    display: inline;
+    display: inline-block;
     font-size: 1.2rem;
-    margin: 0.5rem 1rem; }
+    padding: 0.5rem; }
     .materialy-card__container > label:before {
       content: "▶ "; }
   .materialy-card__container > div {
