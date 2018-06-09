@@ -2,8 +2,8 @@ MCBEDOCV1
 !headerStart
 title|minecraft:attack
 description|エンティティの近接攻撃力と攻撃時の追加効果を設定します
-check_version|1.4.1.0
-last_update|2018/05/20
+check_version|1.4.4.0
+last_update|2018/06/09
 url|behavior/entity/attributes/minecraft_attack.html
 !headerEnd
 $cardStart
@@ -12,7 +12,7 @@ $title(minecraft:attack)
 $cardEnd
 $cardStart
 $title(パラメーター)
-$subtitle(damage)
+$containerStart(damage)
 $code
 "damage": [数値, 数値]
 もしくは
@@ -24,7 +24,8 @@ $code
 値をマイナスにすると金ハートが最大8個まで増えていきます-100にしても8個までです
 通常のハートは増えません
 小数点以下は切り捨てられます
-$subtitle(effect_duration)
+$containerEnd
+$containerStart(effect_duration)
 $code
 "effect_duration": 数値
 $code
@@ -32,29 +33,35 @@ $code
 攻撃したエンティティに与えるステータスフェクトの秒数
 1で1秒
 小数点以下は切り捨てられます
-$subtitle(effect_name)
+$containerEnd
+$containerStart(effect_name)
 $code
 "effect_name": "文字列"
 $code
-デフォルトの値: 
+デフォルトの値:
 近接攻撃されたエンティティに適応されるステータスエフェクトの名前
 名前は/effect コマンド時に使用するエフェクトの名前です(多分)
+$containerEnd
 $cardEnd
 $cardStart
 $title(サンプルコード)
-近接攻撃時5ダメージを与える
+$containerStart(damage[数値]のサンプル,not)
 $code
 "minecraft:attack": {
   "damage": 5
 }
 $code
-近接攻撃時5以上20未満ダメージを与える
+近接攻撃時5ダメージを与える
+$containerEnd
+$containerStart(damage[配列]のサンプル,not)
 $code
 "minecraft:attack": {
   "damage": [5, 20]
 }
 $code
-近接攻撃時5以上20未満ダメージを与え、「目潰し」を5秒付与する
+近接攻撃時5以上20未満ダメージを与える
+$containerEnd
+$containerStart(damage[配列]とeffectのサンプル,not)
 $code
 "minecraft:attack": {
   "damage": [5, 20],
@@ -62,4 +69,6 @@ $code
   "effect_name": "blindness"
 }
 $code
+近接攻撃時5以上20未満ダメージを与え、「目潰し」を5秒付与する
+$containerEnd
 $cardEnd

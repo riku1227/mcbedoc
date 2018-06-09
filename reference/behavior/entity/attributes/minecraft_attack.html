@@ -23,8 +23,8 @@
   </header>
   <div class="materialy-mainContent">
     <div class="materialy-card">
-      <p class="materialy-card__text">このページの最終更新日は 2018/05/20 です</p>
-      <p class="materialy-card__text">このページはMinecraftBE: v1.4.1.0 で動作確認しています</p>
+      <p class="materialy-card__text">このページの最終更新日は 2018/06/09 です</p>
+      <p class="materialy-card__text">このページはMinecraftBE: v1.4.4.0 で動作確認しています</p>
     </div>
 
 <div class="materialy-card"><p class="materialy-card__title">minecraft:attack</p>
@@ -32,7 +32,9 @@
 </div>
 <div class="materialy-card">
 <p class="materialy-card__title">パラメーター</p>
-<p class="materialy-card__subtitle">damage</p>
+<div class="materialy-card__container">
+<input id="card-0" type="checkbox" checked="checked">
+<label for="card-0">damage</label><div>
 <pre><code class="json">"damage": [数値, 数値]
 もしくは
 "damage": 数値
@@ -43,39 +45,58 @@
 <p class="materialy-card__text">値をマイナスにすると金ハートが最大8個まで増えていきます-100にしても8個までです</p>
 <p class="materialy-card__text">通常のハートは増えません</p>
 <p class="materialy-card__text">小数点以下は切り捨てられます</p>
-<p class="materialy-card__subtitle">effect_duration</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-1" type="checkbox" checked="checked">
+<label for="card-1">effect_duration</label><div>
 <pre><code class="json">"effect_duration": 数値
 </code></pre>
 <p class="materialy-card__text">デフォルトの値: 0.0</p>
 <p class="materialy-card__text">攻撃したエンティティに与えるステータスフェクトの秒数</p>
 <p class="materialy-card__text">1で1秒</p>
 <p class="materialy-card__text">小数点以下は切り捨てられます</p>
-<p class="materialy-card__subtitle">effect_name</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-2" type="checkbox" checked="checked">
+<label for="card-2">effect_name</label><div>
 <pre><code class="json">"effect_name": "文字列"
 </code></pre>
-<p class="materialy-card__text">デフォルトの値: </p>
+<p class="materialy-card__text">デフォルトの値:</p>
 <p class="materialy-card__text">近接攻撃されたエンティティに適応されるステータスエフェクトの名前</p>
 <p class="materialy-card__text">名前は/effect コマンド時に使用するエフェクトの名前です(多分)
+</div></div>
 </div>
 <div class="materialy-card">
 <p class="materialy-card__title">サンプルコード</p>
-<p class="materialy-card__text">近接攻撃時5ダメージを与える</p>
+<div class="materialy-card__container">
+<input id="card-3" type="checkbox">
+<label for="card-3">damage[数値]のサンプル</label><div>
 <pre><code class="json">"minecraft:attack": {
   "damage": 5
 }
 </code></pre>
-<p class="materialy-card__text">近接攻撃時5以上20未満ダメージを与える</p>
+<p class="materialy-card__text">近接攻撃時5ダメージを与える</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-4" type="checkbox">
+<label for="card-4">damage[配列]のサンプル</label><div>
 <pre><code class="json">"minecraft:attack": {
   "damage": [5, 20]
 }
 </code></pre>
-<p class="materialy-card__text">近接攻撃時5以上20未満ダメージを与え、「目潰し」を5秒付与する</p>
+<p class="materialy-card__text">近接攻撃時5以上20未満ダメージを与える</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-5" type="checkbox">
+<label for="card-5">damage[配列]とeffectのサンプル</label><div>
 <pre><code class="json">"minecraft:attack": {
   "damage": [5, 20],
   "effect_duration": 5,
   "effect_name": "blindness"
 }
 </code></pre>
+<p class="materialy-card__text">近接攻撃時5以上20未満ダメージを与え、「目潰し」を5秒付与する</p>
+</div></div>
 </div>
 
     <div class="materialy-card">
