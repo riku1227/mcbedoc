@@ -69,3 +69,47 @@
 .materialy-toolbar__content__link:hover {
   background: #212121;
 }
+
+.materialy-card__container {
+  display: inline-block;
+  width: 100%;
+
+  & > input {
+    display: none;
+
+    &:checked {
+      & ~ div {
+        display: inline-block;
+      }
+
+      & ~ label:before {
+        content: "▼ ";
+      }
+    }
+  }
+
+  & > label {
+    display: inline;
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+    &:before {
+      content: "▶ ";
+    }
+  }
+
+  & > div {
+    display: none;
+    width: 100%;
+    animation: materialyCardOpne 650ms ease-in-out 0s;
+  }
+}
+
+@keyframes materialyCardOpne {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -342,3 +342,29 @@ h1 {
 
 .materialy-toolbar__content__link:hover {
   background: #212121; }
+
+.materialy-card__container {
+  display: inline-block;
+  width: 100%; }
+  .materialy-card__container > input {
+    display: none; }
+    .materialy-card__container > input:checked ~ div {
+      display: inline-block; }
+    .materialy-card__container > input:checked ~ label:before {
+      content: "▼ "; }
+  .materialy-card__container > label {
+    display: inline;
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem; }
+    .materialy-card__container > label:before {
+      content: "▶ "; }
+  .materialy-card__container > div {
+    display: none;
+    width: 100%;
+    animation: materialyCardOpne 650ms ease-in-out 0s; }
+
+@keyframes materialyCardOpne {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
