@@ -489,7 +489,7 @@ h1 {
 
 .materialy-card__container > input:checked ~ div {
   max-height: 500rem;
-  transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.75s ease-in-out;
   overflow: auto;
 }
 
@@ -522,7 +522,7 @@ h1 {
   max-height: 0;
   overflow: hidden;
   width: 100%;
-  transition: max-height 0.4s ease-in-out;
+  transition: max-height 0 0.75s ease-in-out;
 }
 
 @keyframes materialyCardOpne {
