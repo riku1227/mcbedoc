@@ -489,7 +489,6 @@ h1 {
 
 .materialy-card__container > input:checked ~ div {
   max-height: 1250px;
-  will-change: transform;
   overflow: auto;
   transition: 1s max-height ease-in-out 0s;
 }
@@ -522,7 +521,6 @@ h1 {
 .materialy-card__container > div {
   max-height: 0;
   overflow: hidden;
-  will-change: transform;
   width: 100%;
   transition: 1s max-height ease-in-out 0s;
 }
