@@ -80,7 +80,7 @@
     &:checked {
       & ~ div {
         max-height: 500rem;
-        transition: max-height 0.75s ease-in-out;
+        transition: 1s max-height ease-in-out 0s;
         overflow: auto;
         &::-webkit-scrollbar {
           width: 5px;
@@ -113,7 +113,7 @@
     overflow: hidden;
     width: 100%;
     //animation: materialyCardOpne 650ms ease-in-out 0s;
-    transition: max-height 0.0.75s ease-in-out;
+    transition: 1s max-height ease-in-out 0s;
   }
 }
 
