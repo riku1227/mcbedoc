@@ -533,3 +533,8 @@ h1 {
     opacity: 1;
   }
 }
+
+.noPadding {
+  margin: 0px;
+  padding: 0px;
+}
