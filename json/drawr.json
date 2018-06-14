@@ -29,6 +29,10 @@
               {
                 "name": "minecraft:spell_effects",
                 "content": "minecraft_spell_effects"
+              },
+              {
+                "name": "minecraft:strength",
+                "content": "minecraft_strength"
               }
             ]
           },
