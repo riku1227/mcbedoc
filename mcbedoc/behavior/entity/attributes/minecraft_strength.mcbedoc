@@ -1,0 +1,73 @@
+MCBEDOCV1
+!headerStart
+title|minecraft:strength
+description|アイテムを運ぶエンティティの持てるアイテムの最大スロット数を設定します
+check_version|1.4.4.0
+last_update|2018/06/14
+url|behavior/entity/attributes/minecraft_strength.html
+!headerEnd
+$cardStart
+$title(minecraft:strength)
+アイテムを運ぶエンティティの持てるアイテムのスロット数を設定します
+※「$link(minecraft:inventory,todo,inline)のcontainer_typeがhorse」「additional_slots_per_strengthが3以上」でないと正常に動作しません
+$cardEnd
+$cardStart
+$title(パラメーター)
+$containerStart(max)
+$code
+"max": 整数値
+$code
+エンティティの持てる最大スロット数を設定します
+
+1で「$link(minecraft:inventory,todo,inline)のadditional_slots_per_strength」で指定した数値スロットです
+$containerEnd
+$containerStart(value)
+$code
+"value": 整数値
+$code
+エンティティの持てるスロット数を設定します
+maxで指定した値よりも値が大きかったとしてもmaxの値になります(例:maxが3,valueが5だとvalueが3として扱われる)
+
+1で「$link(minecraft:inventory,todo,inline)のadditional_slots_per_strength」で指定した数値スロットです
+※「$link(minecraft:inventory,todo,inline)のinventory_size」÷「additional_slots_per_strength」を超えると、スロットは表示されますが、アイテムを入れても保存されずそのアイテムが消えます
+$containerEnd
+$cardEnd
+$cardStart
+$title(サンプルコード)
+$containerStart(max・valueのサンプル,not)
+$code
+"minecraft:inventory": {
+  "inventory_size": 256,
+  "container_type": "horse",
+  "additional_slots_per_strength": 3
+},
+
+"minecraft:strength": {
+  "value": 3,
+  "max": 5
+}
+$code
+additional_slots_per_strengthが3の場合
+
+エンティティの最大スロット数は15
+エンティティのスロット数は9
+$containerEnd
+$containerStart(max・valueのサンプル2,not)
+$code
+"minecraft:inventory": {
+  "inventory_size": 256,
+  "container_type": "horse",
+  "additional_slots_per_strength": 5
+},
+
+"minecraft:strength": {
+  "value": 7,
+  "max": 7
+}
+$code
+additional_slots_per_strengthが5の場合
+
+エンティティの最大スロット数は35
+エンティティのスロット数は35
+$containerEnd
+$cardEnd
