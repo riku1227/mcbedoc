@@ -1,0 +1,72 @@
+MCBEDOCV1
+!headerStart
+title|minecraft:ambient_sound_interval
+description|エンティティが再生する鳴き声などの音が再生される間隔を設定します
+check_version|1.4.4.0
+last_update|2018/06/18
+url|behavior/entity/properties/minecraft_ambient_sound_interval.html
+!headerEnd
+$cardStart
+$title(minecraft:ambient_sound_interval)
+エンティティが再生する鳴き声などの音が再生される間隔を設定します
+$cardEnd
+$cardStart
+$title(パラメーター)
+$containerStart(range)
+$code
+"range": 数値
+$code
+デフォルトの値: 16.0
+音が再生されるまでの最大遅延時間を設定します
+0〜指定した値のランダムで実行されます(人力で計測したので正確な検証はできていません)
+小数点いかがどうなるのかは検証できていません
+1で1秒です
+$containerEnd
+$containerStart(value)
+$code
+"value": 数値
+$code
+デフォルトの値: 8.0
+エンティティが再び音を再生するまでの最小時間を設定します
+実際にエンティティが再び再生するまでの時間は 「valueで指定した値 + [0〜rangeで指定した値のランダム]」秒です
+小数点いかがどうなるのかは検証できていません
+1で1秒です
+$containerEnd
+$cardEnd
+$cardStart
+$title(サンプルコード)
+$containerStart(rangeのサンプル,not)
+$code
+"minecraft:ambient_sound_interval": {
+  "range": 6.0
+}
+$code
+「8 + [0〜6のランダム]」秒に一回エンティティが音を再生する
+$containerEnd
+$containerStart(valueのサンプル,not)
+$code
+"minecraft:ambient_sound_interval": {
+  "value": 1.0
+}
+$code
+「1 + [0〜16のランダム]」秒に一回エンティティが音を再生する
+$containerEnd
+$containerStart(rangeとvalueのサンプル,not)
+$code
+"minecraft:ambient_sound_interval": {
+  "range": 12.0,
+  "value": 5.0
+}
+$code
+「5 + [0〜12のランダム]」秒に一回エンティティが音を再生する
+$containerEnd
+$containerStart(rangeとvalueのサンプル2,not)
+$code
+"minecraft:ambient_sound_interval": {
+  "range": 0.0,
+  "value": 1.0
+}
+$code
+1秒に一回エンティティが音を再生する
+$containerEnd
+$cardEnd

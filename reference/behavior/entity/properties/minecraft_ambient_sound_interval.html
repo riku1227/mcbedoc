@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#212121">
+  <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/style.css">
+  <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/vs2015.css">
+  <script src="https://riku1227.github.io/mcbedoc/js/highlight.pack.js"></script>
+  <title>minecraft:ambient_sound_interval - MCBE Doc | riku1227 Website</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@_riku1227_" />
+  <meta property="og:site_name" content="MCBE Doc | riku1227 Website" />
+  <meta property="og:title" content="minecraft:ambient_sound_interval - MCBE Doc | riku1227 Website" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://riku1227.github.io/mcbedoc/reference/behavior/entity/properties/minecraft_ambient_sound_interval.html" />
+  <meta property="og:image" content="https://riku1227.github.io/mcbedoc/image/cover_image.png" />
+  <meta property="og:description" content="エンティティが再生する鳴き声などの音が再生される間隔を設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです" />
+  <meta name="description" content="エンティティが再生する鳴き声などの音が再生される間隔を設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです"/>
+</head>
+<body ontouchstart="">
+  <header class="materialy-toolbar">
+  </header>
+  <div class="materialy-mainContent">
+    <div class="materialy-card">
+      <p class="materialy-card__text">このページの最終更新日は 2018/06/18 です</p>
+      <p class="materialy-card__text">このページはMinecraftBE: v1.4.4.0 で動作確認しています</p>
+    </div>
+
+<div class="materialy-card"><p class="materialy-card__title">minecraft:ambient_sound_interval</p>
+<p class="materialy-card__text">エンティティが再生する鳴き声などの音が再生される間隔を設定します</p>
+</div>
+<div class="materialy-card">
+<p class="materialy-card__title">パラメーター</p>
+<div class="materialy-card__container">
+<input id="card-0" type="checkbox" checked="checked">
+<label for="card-0">range</label><div>
+<pre><code class="json">"range": 数値
+</code></pre>
+<p class="materialy-card__text">デフォルトの値: 16.0</p>
+<p class="materialy-card__text">音が再生されるまでの最大遅延時間を設定します</p>
+<p class="materialy-card__text">0〜指定した値のランダムで実行されます(人力で計測したので正確な検証はできていません)
+<p class="materialy-card__text">小数点いかがどうなるのかは検証できていません</p>
+<p class="materialy-card__text">1で1秒です</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-1" type="checkbox" checked="checked">
+<label for="card-1">value</label><div>
+<pre><code class="json">"value": 数値
+</code></pre>
+<p class="materialy-card__text">デフォルトの値: 8.0</p>
+<p class="materialy-card__text">エンティティが再び音を再生するまでの最小時間を設定します</p>
+<p class="materialy-card__text">実際にエンティティが再び再生するまでの時間は 「valueで指定した値 + [0〜rangeで指定した値のランダム]」秒です</p>
+<p class="materialy-card__text">小数点いかがどうなるのかは検証できていません</p>
+<p class="materialy-card__text">1で1秒です </p>
+</div></div>
+</div>
+<div class="materialy-card">
+<p class="materialy-card__title">サンプルコード</p>
+<div class="materialy-card__container">
+<input id="card-2" type="checkbox">
+<label for="card-2">rangeのサンプル</label><div>
+<pre><code class="json">"minecraft:ambient_sound_interval": {
+  "range": 6.0
+}
+</code></pre>
+<p class="materialy-card__text">「8 + [0〜6のランダム]」秒に一回エンティティが音を再生する</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-3" type="checkbox">
+<label for="card-3">valueのサンプル</label><div>
+<pre><code class="json">"minecraft:ambient_sound_interval": {
+  "value": 1.0
+}
+</code></pre>
+<p class="materialy-card__text">「1 + [0〜16のランダム]」秒に一回エンティティが音を再生する</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-4" type="checkbox">
+<label for="card-4">rangeとvalueのサンプル</label><div>
+<pre><code class="json">"minecraft:ambient_sound_interval": {
+  "range": 12.0,
+  "value": 5.0
+}
+</code></pre>
+<p class="materialy-card__text">「5 + [0〜12のランダム]」秒に一回エンティティが音を再生する</p>
+</div></div>
+<div class="materialy-card__container">
+<input id="card-5" type="checkbox">
+<label for="card-5">rangeとvalueのサンプル2</label><div>
+<pre><code class="json">"minecraft:ambient_sound_interval": {
+  "range": 0.0,
+  "value": 1.0
+}
+</code></pre>
+<p class="materialy-card__text">1秒に一回エンティティが音を再生する</p>
+</div></div>
+</div>
+
+    <div class="materialy-card">
+      <p class="materialy-card__text">バージョンが違っていたりすると動作が違う・使用できない可能性があります。ご注意ください</p>
+    </div>
+  </div>
+  <script async src="https://riku1227.github.io/mcbedoc/js/index.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

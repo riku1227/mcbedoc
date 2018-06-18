@@ -40,6 +40,10 @@
             "name": "プロパティ",
             "namespace": "properties",
             "content": [
+              {
+                "name": "minecraft:ambient_sound_interval",
+                "content": "minecraft_ambient_sound_interval"
+              }
             ]
           },
           {
