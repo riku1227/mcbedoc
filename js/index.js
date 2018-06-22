@@ -46,13 +46,6 @@ const generateDrawr = function(json) {
 
 (function () {
 
-  let config = {
-    apiKey: "AIzaSyCdsB_yE2aZ2zf0ie67JAIjXahcIb_NZqc",
-    storageBucket: "mcbedoc.appspot.com"
-  };
-  firebase.initializeApp(config);
-  let storage = firebase.storage();
-
   loadFile("https://riku1227.github.io/mcbedoc/core/header.html", generateHeader);
   let target = document.getElementsByClassName("materialy-toolbar")[0];
   const observerHeader = function() {
@@ -61,24 +54,33 @@ const generateDrawr = function(json) {
   let mo = new MutationObserver(observerHeader);
   mo.observe(target, {childList: true});
 
-  let locationArray = location.href.split("/");
-  let firebaseStorageUrl = locationArray[3];
-  for(let i = 4; i != locationArray.length; i++) {
-    firebaseStorageUrl += "/" + locationArray[i];
-  }
+  if(typeof firebase !== "undefined") {
+    let config = {
+      apiKey: "AIzaSyCdsB_yE2aZ2zf0ie67JAIjXahcIb_NZqc",
+      storageBucket: "mcbedoc.appspot.com"
+    };
+    firebase.initializeApp(config);
+    let storage = firebase.storage();
 
-  storage.ref(firebaseStorageUrl).getDownloadURL().then(function (url) {
-    loadFile(url, function(file) {
-      let content = document.getElementsByClassName("materialy-mainContent")[0];
-      content.innerHTML = file + content.innerHTML;
+    let locationArray = location.href.split("/");
+    let firebaseStorageUrl = locationArray[3];
+    for(let i = 4; i != locationArray.length; i++) {
+      firebaseStorageUrl += "/" + locationArray[i];
+    }
+
+    storage.ref(firebaseStorageUrl).getDownloadURL().then(function (url) {
+      loadFile(url, function(file) {
+        let content = document.getElementsByClassName("materialy-mainContent")[0];
+        content.innerHTML = file + content.innerHTML;
+      });
+      let observe = new MutationObserver(function(){
+        const preTags = document.getElementsByTagName("pre");
+        for(let i = 0; i != preTags.length; i++) {
+          const preTag = preTags[i];
+          hljs.highlightBlock(preTag.children[0]);
+        }
+      });
+      observe.observe(document.getElementsByClassName("materialy-mainContent")[0], {childList: true});
     });
-    let observe = new MutationObserver(function(){
-      const preTags = document.getElementsByTagName("pre");
-      for(let i = 0; i != preTags.length; i++) {
-        const preTag = preTags[i];
-        hljs.highlightBlock(preTag.children[0]);
-      }
-    });
-    observe.observe(document.getElementsByClassName("materialy-mainContent")[0], {childList: true});
-  });
+  }
 }());
