@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#212121">
   <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/style.css">
   <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/vs2015.css">
-  <script src="https://riku1227.github.io/mcbedoc/js/highlight.pack.js"></script>
   <title>minecraft:spell_effects - MCBE Doc | riku1227 Website</title>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@_riku1227_" />
@@ -17,179 +16,18 @@
   <meta property="og:image" content="https://riku1227.github.io/mcbedoc/image/cover_image.png" />
   <meta property="og:description" content="コンポーネントが追加されたときにエンティティに追加または削除するステータスエフェクトを設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです" />
   <meta name="description" content="コンポーネントが追加されたときにエンティティに追加または削除するステータスエフェクトを設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです"/>
+  <script src="https://riku1227.github.io/mcbedoc/js/highlight.pack.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
 </head>
 <body ontouchstart="">
   <header class="materialy-toolbar">
   </header>
   <div class="materialy-mainContent">
     <div class="materialy-card">
-      <p class="materialy-card__text">このページの最終更新日は 2018/06/09 です</p>
-      <p class="materialy-card__text">このページはMinecraftBE: v1.4.4.0 で動作確認しています</p>
-    </div>
-
-<div class="materialy-card"><p class="materialy-card__title">minecraft:spell_effects</p>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに追加または削除するステータスエフェクトを設定します</p>
-</div>
-<div class="materialy-card">
-<p class="materialy-card__title">パラメーター</p>
-<div class="materialy-card__container">
-<input id="card-0" type="checkbox" checked="checked">
-<label for="card-0">add_effects</label><div>
-<pre><code class="json">"add_effects": [] //リスト(配列,中身はオブジェクト)
-</code></pre>
-<p class="materialy-card__text">デフォルトの値:</p>
-<p class="materialy-card__text">コンポーネントが追加された時にエンティティに追加するエフェクトのリスト</p>
-<p class="materialy-card__text">※エフェクトの順番はそのエフェクト達が付与されている状態の時、エフェクト一覧で表示される「下から」順に書かないと正常に動作しない可能性があります。</p>
-<p class="materialy-card__subtitle">"add_effects" リストのパラメーター</p>
-<div class="materialy-card__container">
-<input id="card-1" type="checkbox" checked="checked">
-<label for="card-1">effect</label><div>
-<pre><code class="json">"effect": "文字列"
-</code></pre>
-<p class="materialy-card__text">エンティティに付与するエフェクトの名前</p>
-<p class="materialy-card__text">名前は/effect コマンド時に使用するエフェクトの名前です(多分)
-</div></div>
-<div class="materialy-card__container">
-<input id="card-2" type="checkbox" checked="checked">
-<label for="card-2">duration</label><div>
-<pre><code class="json">"duration": 数値
-</code></pre>
-<p class="materialy-card__text">エンティティに付与するエフェクトの秒数</p>
-<p class="materialy-card__text">1で1秒</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-3" type="checkbox" checked="checked">
-<label for="card-3">amplifier</label><div>
-<pre><code class="json">"amplifier": 数値
-</code></pre>
-<p class="materialy-card__text">エンティティに付与するエフェクトのレベル</p>
-<p class="materialy-card__text">4以上にするとエフェクトのレベルが表示されなくなります</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-4" type="checkbox" checked="checked">
-<label for="card-4">ambient</label><div>
-<pre><code class="json">"ambient": ?
-</code></pre>
-<p class="materialy-card__text">現在不明わかる人がいれば教えていただけるとありがたいです…</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-5" type="checkbox" checked="checked">
-<label for="card-5">visible</label><div>
-<pre><code class="json">"visible": 真偽値
-</code></pre>
-<p class="materialy-card__text">エフェクトが付与された時に出てくるパーティクルの表示設定</p>
-<p class="materialy-card__text">trueで表示, falseで非表示</p>
-</div></div>
-<p class="materialy-card__subtitle">"add_effects" リストのパラメーター終了</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-6" type="checkbox" checked="checked">
-<label for="card-6">remove_effects</label><div>
-<pre><code class="json">"remove_effects": "文字列"
-または
-"remove_effects": [
-  "文字列",
-  "文字列",
-  ....
-]
-</code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから削除するエフェクトの名前(のリスト)
-<p class="materialy-card__text">名前は/effect コマンド時に使用するエフェクトの名前です(多分)
-<p class="materialy-card__text">エフェクトの順番は関係有りません</p>
-<p class="materialy-card__text">配列にすると指定されたエフェクトを全て削除します</p>
-<p class="materialy-card__text">remove_effectsはadd_effectsの「前」に実行されます</p>
-</div></div>
-</div>
-<div class="materialy-card">
-<p class="materialy-card__title">サンプルコード</p>
-<div class="materialy-card__container">
-<input id="card-7" type="checkbox">
-<label for="card-7">add_effects[中身単体]のサンプル</label><div>
-<pre><code class="json">"minecraft:spell_effects": {
-  "add_effects": [
-    {
-      "effect": "speed",
-      "duration": 120
-    }
-  ]
-}
-</code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに「移動速度上昇(レベル4)を2分間」付与する</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-8" type="checkbox">
-<label for="card-8">add_effects[中身複数・visible]のサンプル</label><div>
-<pre><code class="json">"minecraft:spell_effects": {
-  "add_effects": [
-    {
-      "effect": "night_vision",
-      "duration": 240,
-      "visible": false
-    },
-    {
-      "effect": "haste",
-      "duration": 240,
-      "amplifier": 3,
-      "visible": false
-    },
-    {
-      "effect": "speed",
-      "duration": 120,
-      "amplifier": 3,
-      "visible": false
-    }
-  ]
-}
-</code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティに「暗視(レベル1)と採掘速度上昇(レベル4)を4分間、移動速度上昇(レベル4)を2分間 "パーティクル非表示" 」で付与する</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-9" type="checkbox">
-<label for="card-9">remove_effects[単体]のサンプル</label><div>
-<pre><code class="json">"minecraft:spell_effects": {
-  "remove_effects": "speed"
-}
-</code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから「移動速上昇」を削除する</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-10" type="checkbox">
-<label for="card-10">remove_effects[中身複数]のサンプル</label><div>
-<pre><code class="json">"minecraft:spell_effects": {
-  "remove_effects": [
-    "speed",
-    "poison",
-    "night_vision"
-  ]
-}
-</code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから「移動速上昇,毒,暗視」を削除する</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-11" type="checkbox">
-<label for="card-11">add_effectsとremove_effectsのサンプル</label><div>
-<pre><code class="json">"minecraft:spell_effects": {
-  "add_effects": [
-    {
-      "effect": "haste",
-      "duration": 120
-    }
-  ],
-  "remove_effects": [
-    "speed",
-    "night_vision"
-  ]
-}
-</code></pre>
-<p class="materialy-card__text">コンポーネントが追加されたときにエンティティから「移動速度上昇,暗視」を削除し、「採掘速度上昇(レベル1)を2分間」付与する</p>
-</div></div>
-</div>
-
-    <div class="materialy-card">
       <p class="materialy-card__text">バージョンが違っていたりすると動作が違う・使用できない可能性があります。ご注意ください</p>
     </div>
   </div>
   <script async src="https://riku1227.github.io/mcbedoc/js/index.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

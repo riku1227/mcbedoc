@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#212121">
   <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/style.css">
   <link rel="stylesheet" href="https://riku1227.github.io/mcbedoc/css/vs2015.css">
-  <script src="https://riku1227.github.io/mcbedoc/js/highlight.pack.js"></script>
   <title>minecraft:strength - MCBE Doc | riku1227 Website</title>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@_riku1227_" />
@@ -17,90 +16,18 @@
   <meta property="og:image" content="https://riku1227.github.io/mcbedoc/image/cover_image.png" />
   <meta property="og:description" content="アイテムを運ぶエンティティの持てるアイテムの最大スロット数を設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです" />
   <meta name="description" content="アイテムを運ぶエンティティの持てるアイテムの最大スロット数を設定します - MinecraftBEのAdd Onなどのドキュメンテーションを書いているサイトです"/>
+  <script src="https://riku1227.github.io/mcbedoc/js/highlight.pack.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
 </head>
 <body ontouchstart="">
   <header class="materialy-toolbar">
   </header>
   <div class="materialy-mainContent">
     <div class="materialy-card">
-      <p class="materialy-card__text">このページの最終更新日は 2018/06/19 です</p>
-      <p class="materialy-card__text">このページはMinecraftBE: v1.4.4.0 で動作確認しています</p>
-    </div>
-
-<div class="materialy-card"><p class="materialy-card__title">minecraft:strength</p>
-<p class="materialy-card__text">アイテムを運ぶエンティティの持てるアイテムのスロット数を設定します</p>
-<p class="materialy-card__text">※「<a class="materialy-button--flat--accent noPadding" href="https://riku1227.github.io/mcbedoc/core/todo.html">minecraft:inventory</a>のcontainer_typeがhorse」「additional_slots_per_strengthが3以上」でないと正常に動作しません</p>
-</div>
-<div class="materialy-card">
-<p class="materialy-card__title">パラメーター</p>
-<div class="materialy-card__container">
-<input id="card-0" type="checkbox" checked="checked">
-<label for="card-0">max</label><div>
-<pre><code class="json">"max": 整数値
-</code></pre>
-<p class="materialy-card__text">エンティティの持てる最大スロット数を設定します</p>
-<p class="materialy-card__text"></p>
-<p class="materialy-card__text">1で「<a class="materialy-button--flat--accent noPadding" href="https://riku1227.github.io/mcbedoc/core/todo.html">minecraft:inventory</a>のadditional_slots_per_strength」で指定した数値スロットです</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-1" type="checkbox" checked="checked">
-<label for="card-1">value</label><div>
-<pre><code class="json">"value": 整数値
-</code></pre>
-<p class="materialy-card__text">エンティティの持てるスロット数を設定します</p>
-<p class="materialy-card__text">maxで指定した値よりも値が大きかったとしてもmaxの値になります(例:maxが3,valueが5だとvalueが3として扱われる)
-<p class="materialy-card__text"></p>
-<p class="materialy-card__text">1で「<a class="materialy-button--flat--accent noPadding" href="https://riku1227.github.io/mcbedoc/core/todo.html">minecraft:inventory</a>のadditional_slots_per_strength」で指定した数値スロットです</p>
-<p class="materialy-card__text">※「<a class="materialy-button--flat--accent noPadding" href="https://riku1227.github.io/mcbedoc/core/todo.html">minecraft:inventory</a>のinventory_size」÷「additional_slots_per_strength」を超えると、スロットは表示されますが、アイテムを入れても保存されずそのアイテムが消えます</p>
-</div></div>
-</div>
-<div class="materialy-card">
-<p class="materialy-card__title">サンプルコード</p>
-<div class="materialy-card__container">
-<input id="card-2" type="checkbox">
-<label for="card-2">max・valueのサンプル</label><div>
-<pre><code class="json">"minecraft:inventory": {
-  "inventory_size": 256,
-  "container_type": "horse",
-  "additional_slots_per_strength": 3
-},
-
-"minecraft:strength": {
-  "value": 3,
-  "max": 5
-}
-</code></pre>
-<p class="materialy-card__text">additional_slots_per_strengthが3の場合</p>
-<p class="materialy-card__text"></p>
-<p class="materialy-card__text">エンティティの最大スロット数は15</p>
-<p class="materialy-card__text">エンティティのスロット数は9</p>
-</div></div>
-<div class="materialy-card__container">
-<input id="card-3" type="checkbox">
-<label for="card-3">max・valueのサンプル2</label><div>
-<pre><code class="json">"minecraft:inventory": {
-  "inventory_size": 256,
-  "container_type": "horse",
-  "additional_slots_per_strength": 5
-},
-
-"minecraft:strength": {
-  "value": 7,
-  "max": 7
-}
-</code></pre>
-<p class="materialy-card__text">additional_slots_per_strengthが5の場合</p>
-<p class="materialy-card__text"></p>
-<p class="materialy-card__text">エンティティの最大スロット数は35</p>
-<p class="materialy-card__text">エンティティのスロット数は35</p>
-</div></div>
-</div>
-
-    <div class="materialy-card">
       <p class="materialy-card__text">バージョンが違っていたりすると動作が違う・使用できない可能性があります。ご注意ください</p>
     </div>
   </div>
   <script async src="https://riku1227.github.io/mcbedoc/js/index.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
