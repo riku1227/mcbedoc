@@ -63,9 +63,17 @@ const generateDrawr = function(json) {
     let storage = firebase.storage();
 
     let locationArray = location.href.split("/");
-    let firebaseStorageUrl = locationArray[3];
-    for(let i = 4; i != locationArray.length; i++) {
-      firebaseStorageUrl += "/" + locationArray[i];
+    let firebaseStorageUrl = "";
+    let isReference = false;
+    for(let i = 0; i != locationArray.length; i++) {
+      if(isReference) {
+        firebaseStorageUrl += "/" + locationArray[i];
+      } else {
+        if(locationArray[i] === "reference") {
+          firebaseStorageUrl += locationArray[i];
+          isReference = true;
+        }
+      }
     }
 
     storage.ref(firebaseStorageUrl).getDownloadURL().then(function (url) {
