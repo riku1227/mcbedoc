@@ -43,6 +43,10 @@
               {
                 "name": "minecraft:ambient_sound_interval",
                 "content": "minecraft_ambient_sound_interval"
+              },
+              {
+                "name": "minecraft:burns_in_daylight",
+                "content": "minecraft_burns_in_daylight"
               }
             ]
           },
