@@ -47,6 +47,14 @@
               {
                 "name": "minecraft:burns_in_daylight",
                 "content": "minecraft_burns_in_daylight"
+              },
+              {
+                "name": "minecraft:can_climb",
+                "content": "minecraft_can_climb"
+              },
+              {
+                "name": "minecraft:can_fly",
+                "content": "minecraft_can_fly"
               }
             ]
           },
