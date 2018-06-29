@@ -22,7 +22,7 @@ h1 {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 5px; }
 
 @media screen and (min-width: 768px) {
   .materialy-mainContent {
@@ -382,3 +382,44 @@ h1 {
 .noPadding {
   margin: 0px;
   padding: 0px; }
+
+.mcbedoc-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .mcbedoc-loading-1 {
+    width: 5rem;
+    height: 1.5rem;
+    background-color: #4CAF50;
+    z-index: 2;
+    position: relative;
+    animation: mcbedoc-loading1 2s ease-in-out 0ms infinite alternate none; }
+  .mcbedoc-loading-2 {
+    width: 5rem;
+    height: 3.5rem;
+    z-index: 1;
+    position: relative;
+    background-color: #795548;
+    animation: mcbedoc-rotate 2s ease-in-out 0ms infinite normal none; }
+
+@keyframes mcbedoc-rotate {
+  0% {
+    transform: rotate(0deg); }
+  20% {
+    transform: rotate(0deg); }
+  80% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes mcbedoc-loading1 {
+  0% {
+    transform: translateY(0rem); }
+  20% {
+    transform: translateY(0rem); }
+  80% {
+    transform: translateY(5rem); }
+  100% {
+    transform: translateY(5rem); } }
