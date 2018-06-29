@@ -81,7 +81,7 @@ const generateDrawr = function(json) {
         let content = document.getElementsByClassName("materialy-mainContent")[0];
         content.innerHTML = file;
 
-        loadFile(".https://riku1227.github.io/mcbedoc/core/bottom_card.html", function(file) {
+        loadFile("https://riku1227.github.io/mcbedoc/core/bottom_card.html", function(file) {
           content.innerHTML = content.innerHTML + file;
         });
       });
