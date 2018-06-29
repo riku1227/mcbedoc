@@ -79,7 +79,11 @@ const generateDrawr = function(json) {
     storage.ref(firebaseStorageUrl).getDownloadURL().then(function (url) {
       loadFile(url, function(file) {
         let content = document.getElementsByClassName("materialy-mainContent")[0];
-        content.innerHTML = file + content.innerHTML;
+        content.innerHTML = file;
+
+        loadFile(".https://riku1227.github.io/mcbedoc/core/bottom_card.html", function(file) {
+          content.innerHTML = content.innerHTML + file;
+        });
       });
       let observe = new MutationObserver(function(){
         const preTags = document.getElementsByTagName("pre");
