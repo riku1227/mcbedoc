@@ -55,6 +55,22 @@
               {
                 "name": "minecraft:can_fly",
                 "content": "minecraft_can_fly"
+              },
+              {
+                "name": "minecraft:can_power_jump",
+                "content": "minecraft_can_power_jump"
+              },
+              {
+                "name": "minecraft:collision_box",
+                "content": "minecraft_collision_box"
+              },
+              {
+                "name": "minecraft:color",
+                "content": "minecraft_color"
+              },
+              {
+                "name": "minecraft:color2",
+                "content": "minecraft_color2"
               }
             ]
           },
