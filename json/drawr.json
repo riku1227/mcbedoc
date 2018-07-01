@@ -10,7 +10,7 @@
     "content": [
       {
         "name": "エンティティ",
-        "namespace": "entity",
+        "namespace": "entities",
         "content": [
           {
             "name": "エンティティ定義",
